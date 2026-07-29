@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+export default function App() {
+return (
 
-function App() {
-  return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Logo/>
+        <Forum1/>
+        <SuitcaseList/>
+        <Status/>
+
     </div>
-  );
+);
 }
 
-export default App;
+function Logo(){
+
+    return <h1> Far Way</h1>
+
+}
+
+function Forum1(){
+
+
+    return (
+
+        <div className= "subject1">
+            <h3>Where are you going for the trip</h3>
+            <select>
+                {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
+                    <option value={num} key={num}>{num}</option>
+                ))}
+            </select>
+
+
+            <input type="text" placeholder="item.."/>
+            <button>Add</button>
+        </div>
+
+    );
+}
+
+function SuitcaseList(){
+
+    return (
+
+        <div className= "subject2">LIST</div>
+    );
+}
+
+function Status(){
+
+    return(
+
+        <footer>
+            <em> The total lists available are </em>
+        </footer>
+    );
+}
+
+
